@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>
+        User Settings
+    </title>
+    <link rel="stylesheet" href="user.css">
+
+</head>
+<body>
+
+    <div class="form-container">
+
+        <form action="#" method="POST" class="user-settings-form">
+            <header>
+                <h1>
+                    Postavke korisničkog računa
+                </h1>
+                <hr class="zaglavlje-linija">
+                <p class="podnaslov">
+                    Upravljajte vašim korisničkim računom, sigurnosnim postavkama i notifikacijama
+                </p>
+            </header>
+            <section class="sekcija-blok racun-podaci">
+                <h2>
+                    Podaci o korisničkom računu
+                </h2>
+               <div class="form-group">
+
+    <label for="full-name">
+        Ime i prezime
+    </label>
+
+    <input type="text" id="full-name" name="full_name" placeholder="Maida Biber">
+
+</div>
+
+                <div class="form-group">
+
+    <label for="email">
+        Email adresa
+    </label>
+
+    <input type="email" id="email" name="email" placeholder="mbiber1@etf.unsa.ba">
+
+</div>
+
+                <div class="form-group items-per-page-group">
+<label for="items-per-page">Broj elemenata po stranici</label>
+<input type="number" id="items-per-page" name="items_per_page" value="25" min="1" max="100">
+                </div>
+            </section>
+            <section class="sekcija-blok sigurnosne-postavke">
+           <h2>Sigurnosne postavke</h2>
+
+         <div class="form-group password-group">
+
+    <label for="new-password">Nova šifra</label>
+
+    <div class="sifra-omotac">
+
+        <input type="password" id="new-password" name="new_password" placeholder="********" class="sifra-polje">
+
+        <p class="hint-text">Leave blank to keep current password.</p>
+
+    </div>
+    
+
+</div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="enable-2fa" name="enable_2fa">
+                    <label for="enable-2fa">Omogući Two-Factor Authentication (2FA)</label>
+                </div>
+
+            </section>
+            <section class="sekcija-blok obavjestenja">
+
+                <h2>Notifikacije</h2>             
+                <div class="form-group contact-method-group">
+
+                    <label>Preferirani način komunikacije</label>
+
+                    <div class="radio-options">
+
+                        <input type="radio" id="email-contact" name="contact_method" value="Email" checked>
+
+                        <label for="email-contact">Email</label>
+                       
+                        <input type="radio" id="sms-contact" name="contact_method" value="SMS">
+
+                        <label for="sms-contact">SMS</label>
+                        <input type="radio" id="none-contact" name="contact_method" value="None">
+                        <label for="none-contact">None</label>
+                    </div>
+                </div>
+                <div class="form-group dropdown-group">
+
+                    <label for="notification-frequency">
+                        Notification frequency
+                    </label>
+
+                    <select id="notification-frequency" name="notification_frequency">
+
+                        <option value="Daily Digest" selected>
+                            Daily
+                        </option>
+                        <option value="Weekly Digest">
+                            Weekly
+                        </option>
+                        <option value="Monthly Digest">
+                            Monthly
+                        </option>
+                       <option value="Never">
+                            Never
+                        </option>
+                    </select>
+                </div>
+            </section>
+            <div class="button-container">
+
+                <button type="submit" class="sacuvaj-promjene-btn">
+                    Spasi promjene
+                </button>
+
+            </div>
+
+           
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

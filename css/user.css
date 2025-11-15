@@ -1,0 +1,226 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', 'Inter', sans-serif; /* ISPRAVLJENO: Usklađen font */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* DODANO: Za vertikalno centriranje forme */
+    padding: 20px;
+    background-color: #f5f6fa; /* ISPRAVLJENO: Usklađena boja pozadine stranice */
+}
+
+
+
+header h1 {
+font-weight: 700;
+font-size: 1.8em;
+margin: 0 0 5px 0;
+color: #333;
+text-align: center;
+}
+
+.zaglavlje-linija {
+    background-color: #5B3FFF;
+    border: 0;
+   max-width: 400px;
+    margin: 0 auto 15px auto;
+    width: 100%;
+
+    height: 3px;
+}
+
+
+.form-container {
+     background-color: #ffffff;
+    padding: 30px 40px;
+   
+    max-width: 840px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
+
+
+.podnaslov {
+    font-style: italic;
+    color: #6c757d;
+    font-size: 1em;
+     text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.sekcija-blok {
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+    
+}
+
+
+
+.sekcija-blok h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #5B3FFF;
+    margin-bottom: 15px;
+}
+
+
+
+.racun-podaci {
+    border: 1px solid #d4d4f7;
+    background-color: #f8f8ff;
+}
+.racun-podaci input {
+    border: 2px solid #5c76ff; /* jača plava traka */
+}
+
+.sigurnosne-postavke {
+    border: 1px solid #ffcccc;
+    background-color: #fff0f0;
+}
+
+
+.sigurnosne-postavke input[type="password"] {
+    border: 2px solid #ff9a9a; 
+    background-color: #fff; 
+}
+
+.obavjestenja {
+     border: 1px solid #c9e6d4;
+    background-color: #e8f9ed;
+}
+.obavjestenja select {
+    border: 2px solid #95d7a7; /* tamnija zelena oko selecta */
+}
+
+.form-group {
+    margin-bottom: 15px;
+
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 3px;
+    
+}
+
+.sifra-polje {
+    border-color: #dc3545;
+}
+.sifra-omotac {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.checkbox-group {
+    margin-top: 15px;
+    display: flex;
+   
+    font-size: 0.9em;
+     align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+.hint-text {
+    color: #6c757d;
+    margin-left: 0;
+    margin-top: 5px;
+    font-size: 0.8em;
+    
+}
+
+.contact-method-group {  
+    display: block;
+}
+
+
+.radio-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;   /* ➜ Ovo sprečava izlaženje iz okvira */
+}
+
+
+.button-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+input::placeholder, select::placeholder { color: #a0a0a0; opacity: 1; }
+input::-moz-placeholder, select::-moz-placeholder { color: #a0a0a0; opacity: 1; }
+input:-ms-input-placeholder, select:-ms-input-placeholder { color: #a0a0a0; }
+.sacuvaj-promjene-btn {
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 30px;
+    
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #5B3FFF;
+    color: white;
+    cursor: pointer;
+}
+
+.sigurnosne-postavke h2 {
+    color: #dc3545; 
+    
+}
+.obavjestenja h2 {
+    color: #28a745; 
+}
+@media (min-width: 750px) {
+
+  .form-group,
+  .contact-method-group,
+  .dropdown-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .form-group label,
+  .contact-method-group > label,
+  .dropdown-group label {
+    width: 220px;
+    text-align: right;
+    margin: 0;
+  }
+
+  .form-group input,
+  .form-group select,
+  .dropdown-group select {
+    flex: 1; 
+  }
+  
+ 
+
+  .checkbox-group {
+    margin-left: 220px;
+  }
+}

@@ -1,0 +1,347 @@
+:root {
+   
+    --boja-pozadina-sidebar: #f8f9fb;
+    --boja-primarna-plava: #5B3FFF; 
+    
+    --boja-pozadina-aktivno: #E3E8FF;
+    
+    --boja-pozadina-hover-nav: #DCE2F9; 
+    --boja-dugme-hover-tamna: #4A33CC; 
+    --boja-oznaka-tekst: #5B3FFF; 
+    --boja-tekst-tamna: #333333;
+    --boja-tekst-svijetla: #6c757d;
+}
+:root {
+  
+    --boja-tekst-tamna: #333333; 
+    --boja-tekst-siva-profil: #888888;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Inter", sans-serif;
+    background-color: #f5f6fa; /* ispravka prema zadatku */
+    color: var(--boja-tekst-tamna);
+}
+
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+#bocna-traka {
+    width: 100%; 
+    background-color: var(--boja-pozadina-sidebar);
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+}
+.stavka-navigacije {
+    margin-bottom: 0.5rem;
+}
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.naslov-aplikacije {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--boja-primarna-plava);
+    margin-bottom: 2rem;
+}
+
+
+
+
+.nav-veza.active {
+    background-color: var(--boja-pozadina-aktivno);
+    color: var(--boja-primarna-plava);
+}
+
+.nav-veza {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+     border-radius: 8px;
+    transition: background-color 0.2s;
+    color: var(--boja-tekst-tamna);
+    font-weight: 600;
+   
+}
+
+
+
+.nav-veza:hover:not(.active) {
+    background-color: var(--boja-pozadina-hover-nav);
+    cursor: pointer;
+}
+
+.profil-sekcija {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #f7f7fb;    
+    border: 1px solid #e3e3ef;     /* lagana bordura */
+    padding: 12px 15px;
+    border-radius: 12px;           /* zaobljeni rubovi */
+    margin-top: 20px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* diskretna sjena */
+}
+
+
+.profile-initials {
+      height: 40px;
+    width: 40px;
+  
+    background-color: var(--boja-tekst-tamna);
+    color: #ffffff;
+    border-radius: 50%;
+    
+    display: flex;
+     font-weight: 700;
+    font-size: 1.1rem;
+    align-items: center;
+     margin-right: 1rem;
+    justify-content: center;
+   
+   
+}
+
+.profile-info strong {
+   
+    font-weight: 600;
+     display: block;
+     color: var(--boja-tekst-tamna);
+    font-size: 0.95rem;
+    
+}
+
+.profile-info span {
+     font-size: 0.8rem;
+    display: block;
+   
+    color: var(--boja-tekst-siva-profil); 
+}
+
+hr {
+   
+    background-color: #e0e0e0;
+    margin-bottom: 0;
+    margin-top: 2rem;
+     border: 0;
+    height: 1px;
+    
+}
+
+
+#glavni-sadrzaj {
+    flex-grow: 1;
+    padding: 2rem 1.5rem;
+}
+
+.zaglavlje {
+     gap: 1rem;
+    flex-direction: column;
+  
+     display: flex;
+    margin-bottom: 2rem;
+}
+
+.zaglavlje h1 {
+    font-size: 1.8rem;
+    
+    line-height: 1.2;
+     margin: 0;
+    font-weight: 700;
+   
+}
+
+.zaglavlje-akcije {
+    display: flex;
+   
+    width: 100%;
+     gap: 1rem;
+}
+
+.polje-pretrage {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    flex-grow: 1;
+    padding: 0.6rem 1rem;
+      transition: border-color 0.2s;
+    font-size: 0.95rem;
+  
+}
+
+.polje-pretrage:focus {
+    outline: none;
+    border-color: var(--boja-primarna-plava);
+}
+
+.novi-projekat-dugme {
+    background-color: var(--boja-primarna-plava);
+    border: none;
+   
+    
+    border-radius: 8px;
+    font-weight: 600;
+     color: white;
+     transition: background-color 0.2s;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    
+    
+}
+
+.novi-projekat-dugme:hover {
+    background-color: var(--boja-dugme-hover-tamna);
+}
+
+
+.projects-grid {
+    display: grid;
+   
+    gap: 20px;
+     grid-template-columns: 1fr;
+}
+
+/* Stilovi kartice projekta */
+.kartica-projekta {
+    background-color: #ffffff;
+   position: relative;
+    border-radius: 12px;
+    padding: 20px;
+      border: 1px solid #e0e0e0;
+    transition: box-shadow 0.2s;
+   
+}
+
+
+.kartica-projekta:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+    cursor: pointer;
+}
+
+.naziv-scenarija {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+}
+
+.opis-scenarija {
+    font-size: 0.9rem;
+    color: var(--boja-tekst-svijetla);
+    margin-bottom: 1.5rem; 
+}
+
+.status-sekcija {
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.status-line {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.status-line strong {
+    font-weight: 600;
+    color: var(--boja-tekst-tamna);
+    margin-right: 0.3rem;
+}
+
+
+.kartica-projekta.active {
+    border-left: 5px solid var(--boja-primarna-plava);
+    border-color: var(--boja-oznaka-tekst);
+    padding-left: 15px; 
+ 
+}
+
+.oznaka-aktivnosti {
+      font-size: 0.75rem;
+    font-weight: 600;
+    position: absolute;
+    top: 20px;
+    
+  
+    right: 20px;
+    background-color: var(--boja-primarna-plava);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+
+.novi-scenarij-kartica {
+    background-color: #fcfcfc;
+    color: var(--boja-tekst-svijetla);
+    display: flex;
+   
+    text-align: center;
+    min-height: 180px; 
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cccccc;
+    
+}
+
+.novi-scenarij-kartica .icon-plus {
+    font-size: 2rem;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+.novi-scenarij-kartica:hover {
+    border-color: var(--boja-primarna-plava);
+    color: var(--boja-primarna-plava);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.novi-scenarij-kartica:hover .icon-plus {
+    color: var(--boja-primarna-plava);
+}
+
+@media (min-width: 750px) {
+    .dashboard-container {
+        flex-direction: row; 
+    }
+
+    #bocna-traka {
+        position: sticky; 
+       top: 0;
+        width: 250px;
+        min-height: 100vh;
+        padding: 3rem 1.5rem;
+    }
+
+    #glavni-sadrzaj {
+        padding: 3rem;
+    }
+
+    .zaglavlje {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .zaglavlje-akcije {
+        width: auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
