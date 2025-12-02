@@ -1,4 +1,3 @@
-
 body {
     font-family: "Poppins", "Inter", sans-serif;
     background-color: #f5f6fa;
@@ -8,14 +7,13 @@ body {
 
 
 .zaglavlje-sticky {
-       width: 100%;
+    width: 100%;
     background: white;
     position: fixed;
     top: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     border-bottom: 1px solid #ddd;
     z-index: 10;
- 
 }
 
 .container-header {
@@ -37,6 +35,7 @@ body {
     cursor: pointer;
     padding: 6px;
     border-radius: 50%;
+    transition: background-color 0.2s;
 }
 
 .back-dugme:hover {
@@ -47,12 +46,14 @@ body {
     font-size: 1.25rem;
     font-weight: bold;
     color: #333;
+    margin: 0;
 }
 
 /* HEADER DUGMAD */
 .zaglavlje-dugmad {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .zaglavlje-dugme {
@@ -62,10 +63,9 @@ body {
     padding: 0.5rem 1rem;
     background-color: #e0e0e0;
     border-radius: 8px;
-    
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    transition: background-color .1s;
+    transition: background-color 0.1s;
 }
 
 .zaglavlje-dugme:hover {
@@ -112,6 +112,8 @@ body {
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
+    margin-bottom: 8px;
+    transition: background-color 0.2s;
 }
 
 .lista-scena-item:hover {
@@ -125,31 +127,59 @@ body {
 
 .lista-scena-item .naslov {
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .lista-scena-item .broj {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
     margin-top: 4px;
 }
 
-/* EDITOR */
+/* EDITOR CONTAINER */
 .editor-container {
     flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
 }
 
+/* DIV ZA PORUKE */
+#poruke {
+    background: #f0f9ff;
+    border: 2px solid #0ea5e9;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Courier New', monospace;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#poruke pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
 .editor-paper {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    font-family: "Courier Prime", "Courier New", monospace;
     background: white;
-    padding: 5rem 6rem;
+    padding: 3rem 6rem;
     border-radius: 10px;
     max-width: 900px;
-    width: 100%;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    font-family: "Courier Prime", monospace;
+    line-height: 1.5;
+    min-height: 500px;
+     width: 100%;
+    font-size: 12pt;
 }
+
 
 .naslov-scene {
     font-size: 1.25rem;
@@ -157,6 +187,11 @@ body {
     text-transform: uppercase;
     color: #D68A00;
     margin-bottom: 1.5em;
+    margin-top: 2em;
+}
+
+.naslov-scene:first-child {
+    margin-top: 0;
 }
 
 .action-line {
@@ -170,33 +205,109 @@ body {
     text-align: center;
     margin-top: 1.5em;
     text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dialogue {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 1.5em;
+    
+}
+
+
+
+.kontrole-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+.kontrole-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.kontrole-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* MOBILNA VERZIJA */
 @media (max-width: 750px) {
+    body {
+        padding-top: 120px;
+    }
 
     .glavni-izgled {
         flex-direction: column;
     }
-
+    
     .bocni-panel {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #e5e7eb;
     }
-
+    
     .zaglavlje-dugmad {
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    
     .editor-paper {
         padding: 2rem;
-        margin: 1rem;
+        margin: 0;
     }
-
+    
     .action-line {
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+    .dialogue {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #poruke {
+        margin: 0 0 1rem 0;
+    }
+
+    .kontrole-container {
+        margin: 0 0 1rem 0;
+    }
+}
+
+/* PRINTANJE */
+@media print {
+    .zaglavlje-sticky,
+    .bocni-panel,
+    .kontrole-container,
+    #poruke {
+        display: none;
+    }
+
+    body {
+        padding-top: 0;
+        background: white;
+    }
+
+    .editor-paper {
+        box-shadow: none;
+        padding: 1in;
+        max-width: 100%;
     }
 }
