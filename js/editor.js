@@ -70,6 +70,20 @@ document.addEventListener('DOMContentLoaded', function() {
         divPoruke.style.display = 'none';
     }
     
+    // NOVA FUNKCIJA ZA JSON FORMATIRANJE
+    function formatirajRezultat(rezultat) {
+        if (Array.isArray(rezultat)) {
+            if (rezultat.length === 0) {
+                return 'Prazan niz';
+            }
+            return JSON.stringify(rezultat, null, 2);
+        }
+        if (typeof rezultat === 'object') {
+            return JSON.stringify(rezultat, null, 2);
+        }
+        return rezultat;
+    }
+    
     let kontroleDiv = document.createElement('div');
     kontroleDiv.className = 'kontrole-container';
     kontroleDiv.style.cssText = `
@@ -164,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dugmeBrojLinija.style.cssText = dugmeStil;
    dugmeBrojLinija.onclick = function() {
     let uloga = prompt('Unesite ime uloge:');
-    if (uloga && uloga.trim()) {  // ← OVDE JE BILA GREŠKA!
+    if (uloga && uloga.trim()) {
         try {
             let broj = editor.brojLinijaTeksta(uloga);
             prikaziPoruku(
@@ -195,30 +209,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         'info'
                     );
                 } else {
-                    let ispis = `SCENARIJ ULOGE "${uloga.toUpperCase()}" (${scenarij.length} replika):\n\n`;
-                    scenarij.forEach((s, i) => {
-                        ispis += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-                        ispis += `Replika ${i+1}/${scenarij.length}\n`;
-                        ispis += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
-                        ispis += `SCENA: ${s.scena}\n`;
-                        ispis += `Pozicija u sceni: ${s.pozicijaUTekstu}\n\n`;
-                        if (s.prethodni) {
-                            ispis += `Prethodni lik: ${s.prethodni.uloga}\n`;
-                            ispis += `  Replika: "${s.prethodni.linije.join(' ')}"\n\n`;
-                        } else {
-                            ispis += `(početak dijaloga)\n\n`;
-                        }
-                        ispis += `TRENUTNI: ${s.trenutni.uloga}\n`;
-                        ispis += `  Replika: "${s.trenutni.linije.join(' ')}"\n`;
-                        ispis += `  (${s.trenutni.linije.length} linija)\n\n`;
-                        if (s.sljedeci) {
-                            ispis += `Sljedeći lik: ${s.sljedeci.uloga}\n`;
-                            ispis += `  Replika: "${s.sljedeci.linije.join(' ')}"\n\n`;
-                        } else {
-                            ispis += `(kraj dijaloga)\n\n`;
-                        }
-                    });
-                    prikaziPoruku(ispis, 'info');
+                    // JSON FORMAT
+                    let jsonIspis = formatirajRezultat(scenarij);
+                    prikaziPoruku(jsonIspis, 'info');
                 }
             } catch (e) {
                 prikaziPoruku('Greška: ' + e.message, 'error');
@@ -236,14 +229,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (grupe.length === 0) {
                 prikaziPoruku('Nema pronađenih grupa (scene bez replika).', 'info');
             } else {
-                let ispis = `GRUPE ULOGA (${grupe.length} dijalog-segmenata):\n\n`;
-                grupe.forEach((g, i) => {
-                    ispis += `${i+1}. ${g.scena}\n`;
-                    ispis += `  Segment: ${g.segment}\n`;
-                    ispis += `  Uloge: ${g.uloge.join(', ')}\n`;
-                    ispis += `  (${g.uloge.length} ${g.uloge.length === 1 ? 'uloga - monolog' : 'uloge'})\n\n`;
-                });
-                prikaziPoruku(ispis, 'info');
+                // JSON FORMAT
+                let jsonIspis = formatirajRezultat(grupe);
+                prikaziPoruku(jsonIspis, 'info');
             }
         } catch (e) {
             prikaziPoruku('Greška: ' + e.message, 'error');

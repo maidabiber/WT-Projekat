@@ -276,33 +276,33 @@ const scenarijUloge = function (uloga) {
     const rezultat = [];
 
     let trenutnaScena = "";
-    let replikeUDijaloguSegmentu = []; 
+    let sveReplikeUSceni = []; // Sve replike u sceni (ne resetuje se)
+    let replikeUSegmentu = []; // Replike u trenutnom dijalog-segmentu
 
     for (let i = 0; i < linije.length; i++) {
         const linija = linije[i];
         const trimmed = linija.trim();
 
-      
+        // Nova scena
         if (jeLiNaslovScene(linija)) {
             trenutnaScena = trimmed;
-            replikeUDijaloguSegmentu = [];
+            sveReplikeUSceni = [];
+            replikeUSegmentu = [];
             continue;
         }
 
-        
+        // Pronađena uloga sa govorom
         if (jeLiUlogaSaGovorom(linije, i)) {
             const imeUloge = trimmed;
             const linijeGovora = [];
 
-          
             let j = i + 1;
             while (j < linije.length) {
                 const lin = linije[j];
-                const linTrimmed = lin.trim();
-                 if (!linTrimmed || jeLiNaslovScene(lin) || jeLiUlogaSaGovorom(linije, j)) {
+                if (!lin.trim() || jeLiNaslovScene(lin) || jeLiUlogaSaGovorom(linije, j)) {
                     break;
                 }
-                   if (!jeLiLinijaUZagradama(lin)) {
+                if (!jeLiLinijaUZagradama(lin)) {
                     linijeGovora.push(lin);
                 }
                 j++;
@@ -314,24 +314,71 @@ const scenarijUloge = function (uloga) {
                     linije: linijeGovora
                 };
                 
-                replikeUDijaloguSegmentu.push(replika);
+                // Dodaj u obe liste
+                sveReplikeUSceni.push(replika);
+                replikeUSegmentu.push(replika);
 
-                // Ako je ovo naša ciljna uloga
+                // Ako je ciljna uloga, dodaj u rezultat
                 if (imeUloge === ciljnaUloga) {
-                    const pozicija = replikeUDijaloguSegmentu.length;
-                    const indexTrenutneReplike = replikeUDijaloguSegmentu.length - 1;
+                    const pozicijaUSceni = sveReplikeUSceni.length; // Pozicija u SCENI
+                    const indexUSegmentu = replikeUSegmentu.length - 1;
                     
-                    const prethodni = indexTrenutneReplike > 0 
-                        ? replikeUDijaloguSegmentu[indexTrenutneReplike - 1] 
+                    // Prethodni (samo iz segmenta)
+                    const prethodni = indexUSegmentu > 0 
+                        ? replikeUSegmentu[indexUSegmentu - 1] 
                         : null;
                     
-                    const sljedeci = indexTrenutneReplike < replikeUDijaloguSegmentu.length - 1
-                        ? replikeUDijaloguSegmentu[indexTrenutneReplike + 1]
-                        : null; // Popunit ćemo kasnije
+                    // Sljedeci (tražimo sledeću repliku u segmentu)
+                    let sljedeci = null;
+                    
+                    // Nastavi parsiranje da nađeš sledeću repliku
+                    let k = j;
+                    while (k < linije.length) {
+                        const nextLinija = linije[k];
+                        const nextTrimmed = nextLinija.trim();
+                        
+                        // Nova scena ili prazan segment = kraj
+                        if (jeLiNaslovScene(nextLinija)) {
+                            break;
+                        }
+                        
+                        // Akcija ili prazna linija = kraj segmenta
+                        if (nextTrimmed && !jeLiLinijaUZagradama(nextLinija) && !jeLiUlogaSaGovorom(linije, k)) {
+                            break;
+                        }
+                        
+                        // Pronađena sledeća uloga
+                        if (jeLiUlogaSaGovorom(linije, k)) {
+                            const nextUloga = nextTrimmed;
+                            const nextLinijeGovora = [];
+                            
+                            let m = k + 1;
+                            while (m < linije.length) {
+                                const lin = linije[m];
+                                if (!lin.trim() || jeLiNaslovScene(lin) || jeLiUlogaSaGovorom(linije, m)) {
+                                    break;
+                                }
+                                if (!jeLiLinijaUZagradama(lin)) {
+                                    nextLinijeGovora.push(lin);
+                                }
+                                m++;
+                            }
+                            
+                            if (nextLinijeGovora.length > 0) {
+                                sljedeci = {
+                                    uloga: nextUloga,
+                                    linije: nextLinijeGovora
+                                };
+                            }
+                            break;
+                        }
+                        
+                        k++;
+                    }
                     
                     rezultat.push({
                         scena: trenutnaScena,
-                        pozicijaUTekstu: pozicija,
+                        pozicijaUTekstu: pozicijaUSceni,
                         prethodni: prethodni,
                         trenutni: replika,
                         sljedeci: sljedeci
@@ -341,78 +388,9 @@ const scenarijUloge = function (uloga) {
 
             i = j - 1;
         }
+        // Akcija ili prazna linija = resetuj segment (ALI NE sveReplikeUSceni!)
         else if (trimmed && !jeLiLinijaUZagradama(linija) && !jeLiNaslovScene(linija)) {
-            replikeUDijaloguSegmentu = [];
-        }
-    }
-
-    for (let k = 0; k < rezultat.length; k++) {
-        if (rezultat[k].sljedeci !== null) {
-            continue; 
-        }
-        const trenutnaScena = rezultat[k].scena;
-        const trenutnaPozicija = rezultat[k].pozicijaUTekstu;
-        
-        let foundScene = false;
-        let pozicijaCounter = 0;
-        let replikeCounter = 0;
-        
-        for (let i = 0; i < linije.length; i++) {
-            const linija = linije[i];
-            const trimmed = linija.trim();
-
-            if (jeLiNaslovScene(linija)) {
-                if (trimmed === trenutnaScena) {
-                    foundScene = true;
-                    pozicijaCounter = 0;
-                    replikeCounter = 0;
-                } else if (foundScene) {
-                    break; 
-                }
-                continue;
-            }
-
-            if (!foundScene) continue;
-
-            if (jeLiUlogaSaGovorom(linije, i)) {
-                const imeUloge = trimmed;
-                const linijeGovora = [];
-
-                let j = i + 1;
-                while (j < linije.length) {
-                    const lin = linije[j];
-                    const linTrimmed = lin.trim();
-                    
-                    if (!linTrimmed || jeLiNaslovScene(lin) || jeLiUlogaSaGovorom(linije, j)) {
-                        break;
-                    }
-                    
-                    if (!jeLiLinijaUZagradama(lin)) {
-                        linijeGovora.push(lin);
-                    }
-                    j++;
-                }
-
-                if (linijeGovora.length > 0) {
-                    replikeCounter++;
-                    pozicijaCounter++;
-                    if (pozicijaCounter === trenutnaPozicija + 1) {
-                        rezultat[k].sljedeci = {
-                            uloga: imeUloge,
-                            linije: linijeGovora
-                        };
-                        break;
-                    }
-                }
-
-                i = j - 1;
-            }
-            else if (trimmed && !jeLiLinijaUZagradama(linija)) {
-                if (pozicijaCounter >= trenutnaPozicija) {
-                    break; 
-                }
-                pozicijaCounter = 0;
-            }
+            replikeUSegmentu = [];
         }
     }
 
