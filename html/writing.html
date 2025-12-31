@@ -14,28 +14,47 @@
     <div class="zaglavlje-sticky">
         <div class="container-header">
             <div class="zaglavlje-lijevo">
-                <button class="back-dugme">
+                <button class="back-dugme" onclick="window.location.href='projects.html'">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M19 12H5M12 19l-7-7 7-7"/>
                     </svg>
                 </button>
-                <h1 class="naslov-projekta">THE LAST STARSHIP (Draft 2)</h1>
+                <h1 class="naslov-projekta" id="naslov-scenarija">THE LAST STARSHIP (Draft 2)</h1>
             </div>
             
             <div class="zaglavlje-dugmad">
-                <button class="zaglavlje-dugme">SCENA</button>
-                <button class="zaglavlje-dugme">AKCIJA</button>
-                <button class="zaglavlje-dugme">LIK</button>
-                <button class="zaglavlje-dugme">DIJALOG</button>
-                <button class="spasi-dugme">SPASI</button>
+                <button class="zaglavlje-dugme" id="btn-ucitaj">UČITAJ SCENARIJ</button>
+                <button class="zaglavlje-dugme" id="btn-kreiraj">NOVI SCENARIJ</button>
+                <button class="zaglavlje-dugme" id="btn-zakljucaj">ZAKLJUČAJ LINIJU</button>
+                <button class="zaglavlje-dugme" id="btn-azuriraj">AŽURIRAJ LINIJU</button>
+                
+                <div class="character-actions" style="border-left: 1px solid #ccc; padding-left: 10px; display: flex; gap: 5px;">
+                    <input type="text" id="inputCharName" placeholder="Lik" style="width: 70px;">
+                    <input type="text" id="inputNewCharName" placeholder="Novo ime" style="width: 70px;">
+                    <button class="zaglavlje-dugme" id="btn-lock-char">LOCK LIK</button>
+                    <button class="zaglavlje-dugme" id="btn-update-char">RENAME</button>
+                </div>
+                
+                <button class="spasi-dugme" id="btn-delte">DELTAS</button>
             </div>
         </div>
     </div>
 
-    
     <div class="glavni-izgled">
         
         <aside class="bocni-panel">
+            <h2 class="scene-naslov">Kolaborativni mod</h2>
+            <div style="padding: 10px; background: #f0f0f0; border-radius: 8px; margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">User ID:</label>
+                <input type="number" id="userId" value="1" min="1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                
+                <label style="display: block; margin-top: 10px; margin-bottom: 5px; font-weight: 600;">Scenario ID:</label>
+                <input type="number" id="scenarioId" value="1" min="1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                
+                <label style="display: block; margin-top: 10px; margin-bottom: 5px; font-weight: 600;">Line ID:</label>
+                <input type="number" id="lineId" value="1" min="1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            
             <h2 class="scene-naslov">Scene (3)</h2>
             <ul style="list-style: none; padding: 0;">
                 <li class="lista-scena-item scene-active">
@@ -53,80 +72,37 @@
             </ul>
         </aside>
 
-        
         <main class="editor-container">
-            
             <div id="poruke" style="display: none;"></div>
             
-            
             <div class="editor-paper" id="divEditor" contenteditable="true">
-<div class="naslov-scene">INT. DVOR - NIGHT</div><br>
+                <div class="naslov-scene">INT. DVOR - NIGHT</div><br>
 
-U velikom salonu, ispunjenom mrakom i sjenama, stoje HASANAGA (45) i njegova MAJKA (70).<br>
-Napetost se može osjetiti.<br>
-Hasanaga stoji ponosno, ali slomljeno.<br><br>
+                U velikom salonu, ispunjenom mrakom i sjenama, stoje HASANAGA (45) i njegova MAJKA (70).<br>
+                Napetost se može osjetiti.<br>
+                Hasanaga stoji ponosno, ali slomljeno.<br><br>
 
-<b>HASANAGA</b><br>
-Majko, donesena je odluka.<br>
-Otići će.<br>
-Ja sam joj poslao poruku.<br>
-Izdala je ponos kuće.<br><br>
+                <b>HASANAGA</b><br>
+                Majko, donesena je odluka.<br>
+                Otiæi će.<br>
+                Ja sam joj poslao poruku.<br>
+                Izdala je ponos kuće.<br><br>
 
-<b>MAJKA</b><br>
-(Glas joj je star, ali odlučan)<br>
-Odluku si donio ti, ne tvoja kuća.<br>
-Tvoja kuća je tiha.<br>
-Tvoj ponos je glasan.<br>
-A taj glas sada ubija.<br><br>
-
-<b>HASANAGA</b><br>
-Ona je morala znati šta znači red.<br>
-Nisam je vidio dok sam ležao ranjen, a to je sramota pred ljudima.<br>
-Ne mogu živjeti sa tuđim sažaljenjem.<br><br>
-
-Majka prilazi sinu, hvatajući ga za ruku.<br>
-On se ne pomjera.<br><br>
-
-<b>MAJKA</b><br>
-Ti se boriš protiv sramote očima drugih, sine.<br>
-A ona se borila protiv tuge u četiri zida.<br>
-Nije se smjelo, reći ćeš?<br>
-A smije li se čovjeku narediti da ne plače?<br><br>
-
-<b>HASANAGA</b><br>
-(Ljutito)<br>
-To nije tuga.<br>
-To je inat!<br>
-Ja sam joj dao sve, Majko.<br>
-Sve što sam imao.<br><br>
-
-<b>MAJKA</b><br>
-Dao si joj samo zidove.<br>
-Srce nisi.<br>
-A gdje je srce, tamo je i dom.<br>
-Ti si je otjerao prije nego što si poslao poruku.<br>
-Ti si joj slomio dušu, ne ja.<br><br>
-
-Hasanaga zatvara oči.<br>
-Shvata težinu svoje greške, ali ponos mu ne dozvoljava da popusti.<br><br>
-
-<b>HASANAGA</b><br>
-(Tiho)<br>
-Kasno je.<br>
-Poruka je otišla.<br>
-Nema povratka.<br><br>
-
-<div class="naslov-scene">EXT. VISOKA KAPIJA DVORA - MORNING</div><br>
-
-Hasanaginica, zamotana u veo, prolazi kroz kapiju.<br>
-Gleda prema kući.<br>
-Dva mala sina stoje pored majke, uplakani.<br>
+                <b>MAJKA</b><br>
+                (Glas joj je star, ali odlučan)<br>
+                Odluku si donio ti, ne tvoja kuća.<br>
+                Tvoja kuća je tiha.<br>
+                Tvoj ponos je glasan.<br>
+                A taj glas sada ubija.<br><br>
             </div>
-            
         </main>
     </div>
 
+    <!-- JavaScript fajlovi - redoslijed je VAŽAN! -->
+    <script src="../js/PoziviAjaxFetch.js"></script>
+    <script src="../js/PoziviAjax.js"></script>
     <script src="../js/EditorTeksta.js"></script>
     <script src="../js/editor.js"></script>
+    
 </body>
 </html>

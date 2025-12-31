@@ -1,0 +1,41 @@
+{
+  "id": 26,
+  "title": "NajnovijeTestiranje",
+  "content": [
+    {
+      "lineId": 1,
+      "nextLineId": 3,
+      "text": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica"
+    },
+    {
+      "lineId": 3,
+      "nextLineId": 4,
+      "text": "mobilnih aplikacija"
+    },
+    {
+      "lineId": 4,
+      "nextLineId": 5,
+      "text": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike"
+    },
+    {
+      "lineId": 5,
+      "nextLineId": 6,
+      "text": "kao što su JavaScript"
+    },
+    {
+      "lineId": 6,
+      "nextLineId": 7,
+      "text": "Python"
+    },
+    {
+      "lineId": 7,
+      "nextLineId": 2,
+      "text": "Java i C++."
+    },
+    {
+      "lineId": 2,
+      "nextLineId": null,
+      "text": "imati dvadeset riječi a druga linija će imati preostalih devetnaest riječi što je tačno ono što nam treba\""
+    }
+  ]
+}
