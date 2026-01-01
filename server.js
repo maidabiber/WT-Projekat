@@ -1,10 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
 
-const app = express();
+const cors = require('cors');
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
 const PORT = 3000;
+const app = express();
 
 app.use(cors());
 app.use(express.json());
@@ -52,38 +52,95 @@ function getMaxLineId(scenario) {
     return maxId;
 }
 
+
+function brojRijeci(tekst) {
+   
+    const rijeci = tekst.match(/[a-zčćžšđA-ZČĆŽŠĐ]+/g);
+    return rijeci ? rijeci.length : 0;
+}
+
+
 function wrapText(text) {
     const cleanText = text
         .replace(/\n/g, ' ')
         .replace(/\r/g, ' ')
+        .replace(/\t/g, ' ')
         .replace(/\s+/g, ' ')
         .trim();
 
     if (cleanText === "") return [""];
 
-    const words = cleanText.split(/\s+/).filter(w => w.length > 0);
+    const totalWords = brojRijeci(cleanText);
+   
 
-    if (words.length <= 20) {
-        return [words.join(' ')];
+    // Ako ima 20 ili manje riječi - jedna linija
+    if (totalWords <= 20) {
+       
+
+        return [cleanText];
     }
 
+  
+    const words = cleanText.match(/[a-zčćžšđA-ZČĆŽŠĐ]+/g);
+    if (!words || words.length === 0) return [cleanText];
+
+    // Pronađi sve pozicije riječi u originalnom tekstu
+    const wordPositions = [];
+    let searchPos = 0;
+    words.forEach(word => {
+        const regex = new RegExp(word, 'i');
+        const match = cleanText.substring(searchPos).match(regex);
+        if (match) {
+            const startPos = searchPos + match.index;
+            const endPos = startPos + word.length;
+            wordPositions.push({ word, start: startPos, end: endPos });
+            searchPos = endPos;
+        }
+    });
+
+    // Podijeli tekst u linije po 20 riječi
     const lines = [];
-    for (let i = 0; i < words.length; i += 20) {
-        const chunk = words.slice(i, i + 20);
-        lines.push(chunk.join(' '));
+    let currentWordIndex = 0;
+
+    while (currentWordIndex < words.length) {
+        const endWordIndex = Math.min(currentWordIndex + 20, words.length);
+        
+        // Uzmi prvih/posljednjih 20 riječi
+        const startPos = wordPositions[currentWordIndex].start;
+        const endPos = wordPositions[endWordIndex - 1].end;
+        
+        let lineText = cleanText.substring(startPos, endPos).trim();
+        
+        // Dodaj whitespace nakon linije ako nije posljednja
+        if (endWordIndex < words.length) {
+            // Provjeri da li ima tekst nakon ove riječi
+            const afterText = cleanText.substring(endPos).trimStart();
+            if (afterText) {
+                lineText = cleanText.substring(startPos, endPos).trim();
+            }
+        }
+        
+        lines.push(lineText);
+       
+        
+        currentWordIndex = endWordIndex;
     }
 
     return lines;
 }
 
-// ISPRAVLJENA FUNKCIJA: Svaki string u nizu je POSEBNA linija, pa se svakiWraPuje
+
 function processNewText(textArray) {
+   
     const allLines = [];
     
-    textArray.forEach(text => {
+    textArray.forEach((text, idx) => {
+      
         const wrapped = wrapText(text);
+        console.log(`[PROCESS] Wrap rezultat:`, wrapped);
         allLines.push(...wrapped);
     });
+    
     
     return allLines;
 }
@@ -100,7 +157,6 @@ app.post('/api/scenarios', (req, res) => {
     res.status(200).json(scenario);
 });
 
-// ISPRAVLJENA RUTA: Ako korisnik ima zaključanu drugu liniju, otključava je
 app.post('/api/scenarios/:scenarioId/lines/:lineId/lock', (req, res) => {
     const sId = parseInt(req.params.scenarioId);
     const lId = parseInt(req.params.lineId);
@@ -110,14 +166,12 @@ app.post('/api/scenarios/:scenarioId/lines/:lineId/lock', (req, res) => {
     const scenario = readScenario(sId);
     if (!scenario.content.find(l => l.lineId === lId)) return res.status(404).json({ message: "Linija ne postoji!" });
 
-    // Provjeri da li JE VEĆ ZAKLJUČANA OD DRUGOG korisnika
     for (let user in locks.lines) {
         if (locks.lines[user].scenarioId === sId && locks.lines[user].lineId === lId && parseInt(user) !== uId) {
             return res.status(409).json({ message: "Linija je vec zakljucana!" });
         }
     }
     
-    // Ako OVAJ korisnik ima neku DRUGU liniju zaključanu, otključaj je
     if (locks.lines[uId] && !(locks.lines[uId].scenarioId === sId && locks.lines[uId].lineId === lId)) {
         delete locks.lines[uId];
     }
@@ -130,6 +184,8 @@ app.put('/api/scenarios/:scenarioId/lines/:lineId', (req, res) => {
     const sId = parseInt(req.params.scenarioId);
     const lId = parseInt(req.params.lineId);
     const { userId, newText } = req.body;
+
+    
 
     if (!scenarioExists(sId)) 
         return res.status(404).json({ message: "Scenario ne postoji!" });
@@ -172,7 +228,6 @@ app.put('/api/scenarios/:scenarioId/lines/:lineId', (req, res) => {
     }
 
     const lineMap = new Map(scenario.content.map(l => [l.lineId, l]));
-
     let removeIds = [];
     let cur = lId;
     while (cur !== null && lineMap.has(cur)) {
@@ -180,12 +235,14 @@ app.put('/api/scenarios/:scenarioId/lines/:lineId', (req, res) => {
         cur = lineMap.get(cur).nextLineId;
     }
     scenario.content = scenario.content.filter(l => !removeIds.includes(l.lineId));
-
     scenario.content.splice(idx, 0, ...newObjs);
 
     writeScenario(sId, scenario);
-
     delete locks.lines[userId];
+
+  
+    newObjs.forEach((obj, i) => {
+       
 
     res.status(200).json({ message: "Linija je uspjesno azurirana!" });
 });

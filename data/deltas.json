@@ -468,5 +468,459 @@
     "nextLineId": null,
     "content": "Neki novi tekst ponovo unosimo",
     "timestamp": 1767221376
+  },
+  {
+    "scenarioId": 39,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": null,
+    "content": "hej",
+    "timestamp": 1767227269
+  },
+  {
+    "scenarioId": 46,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": null,
+    "content": "Nova recenica",
+    "timestamp": 1767229445
+  },
+  {
+    "scenarioId": 46,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 2,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767229466
+  },
+  {
+    "scenarioId": 46,
+    "type": "line_update",
+    "lineId": 2,
+    "nextLineId": 3,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767229466
+  },
+  {
+    "scenarioId": 46,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 4,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767229466
+  },
+  {
+    "scenarioId": 46,
+    "type": "line_update",
+    "lineId": 4,
+    "nextLineId": 5,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767229466
+  },
+  {
+    "scenarioId": 46,
+    "type": "line_update",
+    "lineId": 5,
+    "nextLineId": 6,
+    "content": "Python",
+    "timestamp": 1767229466
+  },
+  {
+    "scenarioId": 46,
+    "type": "line_update",
+    "lineId": 6,
+    "nextLineId": null,
+    "content": "Java i C++.",
+    "timestamp": 1767229466
+  },
+  {
+    "scenarioId": 47,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 2,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767229609
+  },
+  {
+    "scenarioId": 47,
+    "type": "line_update",
+    "lineId": 2,
+    "nextLineId": 3,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767229609
+  },
+  {
+    "scenarioId": 47,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 4,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767229609
+  },
+  {
+    "scenarioId": 47,
+    "type": "line_update",
+    "lineId": 4,
+    "nextLineId": 5,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767229609
+  },
+  {
+    "scenarioId": 47,
+    "type": "line_update",
+    "lineId": 5,
+    "nextLineId": 6,
+    "content": "Python",
+    "timestamp": 1767229609
+  },
+  {
+    "scenarioId": 47,
+    "type": "line_update",
+    "lineId": 6,
+    "nextLineId": null,
+    "content": "Java i C++.",
+    "timestamp": 1767229609
+  },
+  {
+    "scenarioId": 48,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 2,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767229748
+  },
+  {
+    "scenarioId": 48,
+    "type": "line_update",
+    "lineId": 2,
+    "nextLineId": 3,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767229748
+  },
+  {
+    "scenarioId": 48,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 4,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767229748
+  },
+  {
+    "scenarioId": 48,
+    "type": "line_update",
+    "lineId": 4,
+    "nextLineId": 5,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767229748
+  },
+  {
+    "scenarioId": 48,
+    "type": "line_update",
+    "lineId": 5,
+    "nextLineId": 6,
+    "content": "Python",
+    "timestamp": 1767229748
+  },
+  {
+    "scenarioId": 48,
+    "type": "line_update",
+    "lineId": 6,
+    "nextLineId": null,
+    "content": "Java i C++.",
+    "timestamp": 1767229748
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 2,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767230301
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 2,
+    "nextLineId": 3,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767230301
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 4,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767230301
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 4,
+    "nextLineId": 5,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767230301
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 5,
+    "nextLineId": 6,
+    "content": "Python",
+    "timestamp": 1767230301
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 6,
+    "nextLineId": null,
+    "content": "Java i C++.",
+    "timestamp": 1767230301
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 7,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767230398
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 7,
+    "nextLineId": 8,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767230398
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 8,
+    "nextLineId": 9,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767230398
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 9,
+    "nextLineId": 10,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767230398
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 10,
+    "nextLineId": 11,
+    "content": "Python",
+    "timestamp": 1767230398
+  },
+  {
+    "scenarioId": 50,
+    "type": "line_update",
+    "lineId": 11,
+    "nextLineId": 2,
+    "content": "Java i C++.",
+    "timestamp": 1767230398
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 2,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767230608
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 2,
+    "nextLineId": 3,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767230608
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 4,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767230608
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 4,
+    "nextLineId": 5,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767230608
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 5,
+    "nextLineId": 6,
+    "content": "Python",
+    "timestamp": 1767230608
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 6,
+    "nextLineId": null,
+    "content": "Java i C++.",
+    "timestamp": 1767230608
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 7,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767230749
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 7,
+    "nextLineId": 8,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767230749
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 8,
+    "nextLineId": 9,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767230749
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 9,
+    "nextLineId": 10,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767230749
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 10,
+    "nextLineId": 11,
+    "content": "Python",
+    "timestamp": 1767230749
+  },
+  {
+    "scenarioId": 42,
+    "type": "line_update",
+    "lineId": 11,
+    "nextLineId": 2,
+    "content": "Java i C++.",
+    "timestamp": 1767230749
+  },
+  {
+    "scenarioId": 51,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 2,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
+    "timestamp": 1767230798
+  },
+  {
+    "scenarioId": 51,
+    "type": "line_update",
+    "lineId": 2,
+    "nextLineId": 3,
+    "content": "mobilnih aplikacija",
+    "timestamp": 1767230798
+  },
+  {
+    "scenarioId": 51,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 4,
+    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+    "timestamp": 1767230798
+  },
+  {
+    "scenarioId": 51,
+    "type": "line_update",
+    "lineId": 4,
+    "nextLineId": 5,
+    "content": "kao što su JavaScript",
+    "timestamp": 1767230798
+  },
+  {
+    "scenarioId": 51,
+    "type": "line_update",
+    "lineId": 5,
+    "nextLineId": 6,
+    "content": "Python",
+    "timestamp": 1767230798
+  },
+  {
+    "scenarioId": 51,
+    "type": "line_update",
+    "lineId": 6,
+    "nextLineId": null,
+    "content": "Java i C++.",
+    "timestamp": 1767230798
+  },
+  {
+    "scenarioId": 52,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": 2,
+    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica, mobilnih aplikacija, softverskih rješenja",
+    "timestamp": 1767231231
+  },
+  {
+    "scenarioId": 52,
+    "type": "line_update",
+    "lineId": 2,
+    "nextLineId": null,
+    "content": "i automatskih sistema. Programeri pišu kod koristeći različite programske jezike, kao što su JavaScript, Python, Java i C",
+    "timestamp": 1767231231
+  },
+  {
+    "scenarioId": 53,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": null,
+    "content": "ALICE ide u park. ALICE voli šetnje. BOB čeka ALICE kod fontane.",
+    "timestamp": 1767231402
+  },
+  {
+    "scenarioId": 53,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1767231479
+  },
+  {
+    "scenarioId": 44,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": null,
+    "content": "Brisemo i pisemo novi",
+    "timestamp": 1767233103
+  },
+  {
+    "scenarioId": 44,
+    "type": "line_update",
+    "lineId": 1,
+    "nextLineId": null,
+    "content": "MAIDA danas radimo spiralu",
+    "timestamp": 1767233122
+  },
+  {
+    "scenarioId": 44,
+    "type": "char_rename",
+    "oldName": "MAIDA",
+    "newName": "NAIDA",
+    "timestamp": 1767233134
   }
 ]

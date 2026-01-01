@@ -1,0 +1,16 @@
+{
+  "id": 52,
+  "title": "Nadam se da sada radi",
+  "content": [
+    {
+      "lineId": 1,
+      "text": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica, mobilnih aplikacija, softverskih rješenja",
+      "nextLineId": 2
+    },
+    {
+      "lineId": 2,
+      "text": "i automatskih sistema. Programeri pišu kod koristeći različite programske jezike, kao što su JavaScript, Python, Java i C",
+      "nextLineId": null
+    }
+  ]
+}

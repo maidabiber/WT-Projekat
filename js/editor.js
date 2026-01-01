@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentLockedLineId = null;
 
-    // --- PORUKE ---
     let divPoruke = document.getElementById('poruke');
     if (!divPoruke) {
         divPoruke = document.createElement('div');
@@ -32,22 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    function prikaziJSON(status, response) {
-        divPoruke.style.display = 'block';
-        
-        if (status === 200 || status === 201) {
-            divPoruke.style.background = '#d1fae5';
-            divPoruke.style.borderColor = '#10b981';
-        } else if (status === 409) {
-            divPoruke.style.background = '#fef3c7';
-            divPoruke.style.borderColor = '#f59e0b';
-        } else {
-            divPoruke.style.background = '#fee2e2';
-            divPoruke.style.borderColor = '#ef4444';
-        }
-        
-        divPoruke.innerHTML = '<pre style="margin:0; white-space: pre-wrap;">' + JSON.stringify(response, null, 2) + '</pre>';
-    }
 
 
     function ucitajICrtajScenario() {
@@ -59,7 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 divEditor.innerHTML = "";
                 
                 if (data.content && data.content.length > 0) {
-                    data.content.forEach(linija => {
+                    
+                    const sortiraneLinije = sortLinije(data.content);
+                    
+                    sortiraneLinije.forEach(linija => {
                         let p = document.createElement('p');
                         p.className = 'dialogue';
                         p.textContent = linija.text || "";
@@ -79,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const naslovElem = document.getElementById('naslov-scenarija');
                 if (naslovElem) naslovElem.textContent = data.title || "Novi Scenario";
                 
-                try { editor = EditorTeksta(divEditor); } catch(e) {}
+                try { editor = EditorTeksta(divEditor); } catch(e) { console.log('EditorTeksta nije dostupan'); }
                 
             } else {
                 prikaziPoruku("Greška pri učitavanju: " + (data ? data.message : "Server nedostupan"), "error");
@@ -87,7 +73,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-   
+     function prikaziJSON(status, response) {
+        divPoruke.style.display = 'block';
+        
+        if (status === 200 || status === 201) {
+            divPoruke.style.background = '#d1fae5';
+            divPoruke.style.borderColor = '#10b981';
+        } else if (status === 409) {
+            divPoruke.style.background = '#fef3c7';
+            divPoruke.style.borderColor = '#f59e0b';
+        } else {
+            divPoruke.style.background = '#fee2e2';
+            divPoruke.style.borderColor = '#ef4444';
+        }
+        
+        divPoruke.innerHTML = '<pre style="margin:0; white-space: pre-wrap;">' + JSON.stringify(response, null, 2) + '</pre>';
+    }
+    
+    function sortLinije(content) {
+        if (!content || content.length === 0) return [];
+        const lineMap = new Map(content.map(l => [l.lineId, l]));
+        const hasIncoming = new Set();
+        
+        content.forEach(line => {
+            if (line.nextLineId !== null) {
+                hasIncoming.add(line.nextLineId);
+            }
+        });
+        
+        let firstLine = content.find(l => !hasIncoming.has(l.lineId));
+        if (!firstLine) firstLine = content[0]; // fallback
+        
+      
+        const sorted = [];
+        let current = firstLine;
+        const visited = new Set();
+        
+        while (current && !visited.has(current.lineId)) {
+            sorted.push(current);
+            visited.add(current.lineId);
+            current = current.nextLineId !== null ? lineMap.get(current.nextLineId) : null;
+        }
+        
+        return sorted;
+    }
+
     function lockLine(lineId, callback) {
         const uId = document.getElementById('userId').value || 1;
         const sId = document.getElementById('scenarioId').value || 1;
@@ -104,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-    function updateLine(lineId, noviTekst, callback) {
+    function updateLine(lineId, paragrafElement, callback) {
         const uId = document.getElementById('userId').value || 1;
         const sId = document.getElementById('scenarioId').value || 1;
 
@@ -113,15 +143,48 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const cleanText = noviTekst
-            .replace(/[\n\r\t]+/g, ' ')
-            .replace(/\s+/g, ' ')
-            .trim();
+        function getAllText(element) {
+            let text = '';
+            const walker = document.createTreeWalker(
+                element,
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+            
+            let node;
+            while (node = walker.nextNode()) {
+                text += node.textContent;
+            }
+            
+            return text;
+        }
+
+        // Ako je string, koristi ga direktno, inače izvuci tekst iz elementa
+        const rawText = typeof paragrafElement === 'string' 
+            ? paragrafElement 
+            : getAllText(paragrafElement);
+
+        if (typeof paragrafElement !== 'string') {
+          
+            paragrafElement.childNodes.forEach((node, i) => {
+                console.log(`  Node ${i}:`, node.nodeName, node.nodeType, node.textContent);
+            });
+        }
+
+        // KLJUČNO: Očisti SVE newline, tab i višestruke razmake
+        const cleanText = rawText
+            .replace(/\n+/g, ' ')      
+            .replace(/\r+/g, ' ')     
+            .replace(/\t+/g, ' ')     
+            .replace(/\s+/g, ' ')      
+            .trim();                  
 
         PoziviAjaxFetch.updateLine(sId, lineId, uId, [cleanText], function(status, data) {
             if (status === 200) {
                 currentLockedLineId = null;
-                ucitajICrtajScenario();
+                prikaziPoruku("Linija uspješno ažurirana! Reload za wrap...", "success");
+                setTimeout(() => ucitajICrtajScenario(), 500);
                 if (callback) callback(true);
             } else {
                 prikaziPoruku("Greška ažuriranja: " + data.message, "error");
@@ -130,18 +193,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // DUGMAD
     const btnUcitaj = document.getElementById('btn-ucitaj');
     if (btnUcitaj) {
         btnUcitaj.onclick = function() {
-            const scenarioId = parseInt(document.getElementById('scenarioId').value);
-            
-            PoziviAjax.getScenario(scenarioId, function(status, response) {
-                prikaziJSON(status, response);
-                
-                if (status === 200) {
-                    document.getElementById('naslov-scenarija').textContent = response.title;
-                }
-            });
+            ucitajICrtajScenario();
         };
     }
 
@@ -163,7 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-   
     const btnZakljucaj = document.getElementById('btn-zakljucaj');
     if (btnZakljucaj) {
         btnZakljucaj.onclick = function() {
@@ -171,13 +226,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const lineId = parseInt(document.getElementById('lineId').value);
             const userId = parseInt(document.getElementById('userId').value);
             
-            PoziviAjax.lockLine(scenarioId, lineId, userId, function(status, response) {
+            PoziviAjaxFetch.lockLine(scenarioId, lineId, userId, function(status, response) {
                 prikaziJSON(status, response);
             });
         };
     }
 
-    
     const btnAzuriraj = document.getElementById('btn-azuriraj');
     if (btnAzuriraj) {
         btnAzuriraj.onclick = function() {
@@ -185,19 +239,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const lineId = parseInt(document.getElementById('lineId').value);
             const userId = parseInt(document.getElementById('userId').value);
             
-            const noviTekst = prompt('Unesi novi tekst (odvojeno zarezom za više linija):');
+            const noviTekst = prompt('Unesi novi tekst:');
             if (!noviTekst) return;
-            
-            const newText = noviTekst.split(',').map(t => t.trim());
-            
            
-            PoziviAjax.updateLine(scenarioId, lineId, userId, newText, function(status, response) {
+         
+            PoziviAjaxFetch.updateLine(scenarioId, lineId, userId, [noviTekst], function(status, response) {
                 prikaziJSON(status, response);
+                if (status === 200) {
+                    setTimeout(() => ucitajICrtajScenario(), 500);
+                }
             });
         };
     }
 
-   
     const btnLockChar = document.getElementById('btn-lock-char');
     if (btnLockChar) {
         btnLockChar.onclick = function() {
@@ -212,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-    // UPDATE CHARACTER
     const btnUpdateChar = document.getElementById('btn-update-char');
     if (btnUpdateChar) {
         btnUpdateChar.onclick = function() {
@@ -228,29 +281,18 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-    // DELTAS - sa JSON prikazom
     const btnDeltas = document.getElementById('btn-delte');
     if (btnDeltas) {
         btnDeltas.onclick = function() {
             const scenarioId = parseInt(document.getElementById('scenarioId').value);
             
-            PoziviAjax.getDeltas(scenarioId, 0, function(status, response) {
-                divPoruke.style.display = 'block';
-                
-                if (status === 200) {
-                    divPoruke.style.background = '#f0f9ff';
-                    divPoruke.style.borderColor = '#0ea5e9';
-                } else {
-                    divPoruke.style.background = '#fee2e2';
-                    divPoruke.style.borderColor = '#ef4444';
-                }
-                
-                divPoruke.innerHTML = '<pre style="margin:0; white-space: pre-wrap;">' + JSON.stringify(response, null, 2) + '</pre>';
+            PoziviAjaxFetch.getDeltas(scenarioId, 0, function(status, response) {
+                prikaziJSON(status, response);
             });
         };
     }
 
-    // --- KLIK NA LINIJU ---
+    
     divEditor.addEventListener('click', function(e) {
         const p = e.target.closest('p');
         if (p) {
@@ -273,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- FOCUS OUT ---
+    
     let isUpdating = false;
     
     divEditor.addEventListener('focusout', function(e) {
@@ -281,13 +323,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!p || isUpdating) return;
 
         const lineId = p.getAttribute('data-line-id');
-        const noviTekst = p.textContent || "";
 
         if (currentLockedLineId && currentLockedLineId == lineId) {
             isUpdating = true;
             p.style.borderLeft = "3px solid #fbbf24";
             
-            updateLine(lineId, noviTekst, function(success) {
+           
+            updateLine(lineId, p, function(success) {
                 isUpdating = false;
                 if (success) {
                     p.style.borderLeft = "none";
@@ -298,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- ENTER KEY ---
+ 
     divEditor.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -319,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- INICIJALIZACIJA ---
+   
     let editor;
     try {
         editor = EditorTeksta(divEditor);
@@ -328,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Greška pri inicijalizaciji:', error.message);
     }
 
-    // --- DUGMAD ZA ANALIZU ---
+    
     let kontroleDiv = document.createElement('div');
     kontroleDiv.className = 'kontrole-container';
     kontroleDiv.style.cssText = `padding: 1rem; background: white; border-radius: 8px; display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 100%; max-width: 900px;`;

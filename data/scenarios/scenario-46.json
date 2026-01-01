@@ -1,36 +1,36 @@
 {
-  "id": 42,
-  "title": "NOVI",
+  "id": 46,
+  "title": "NoviScenarij",
   "content": [
     {
       "lineId": 1,
       "text": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-      "nextLineId": 7
-    },
-    {
-      "lineId": 7,
-      "text": "mobilnih aplikacija",
-      "nextLineId": 8
-    },
-    {
-      "lineId": 8,
-      "text": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-      "nextLineId": 9
-    },
-    {
-      "lineId": 9,
-      "text": "kao što su JavaScript",
-      "nextLineId": 10
-    },
-    {
-      "lineId": 10,
-      "text": "Python",
-      "nextLineId": 11
-    },
-    {
-      "lineId": 11,
-      "text": "Java i C++.",
       "nextLineId": 2
+    },
+    {
+      "lineId": 2,
+      "text": "mobilnih aplikacija",
+      "nextLineId": 3
+    },
+    {
+      "lineId": 3,
+      "text": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
+      "nextLineId": 4
+    },
+    {
+      "lineId": 4,
+      "text": "kao što su JavaScript",
+      "nextLineId": 5
+    },
+    {
+      "lineId": 5,
+      "text": "Python",
+      "nextLineId": 6
+    },
+    {
+      "lineId": 6,
+      "text": "Java i C++.",
+      "nextLineId": null
     }
   ]
 }
