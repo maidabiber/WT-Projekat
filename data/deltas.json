@@ -3,924 +3,520 @@
     "scenarioId": 1,
     "type": "line_update",
     "lineId": 1,
-    "nextLineId": null,
-    "content": "",
-    "timestamp": 1767191554
+    "nextLineId": 2,
+    "content": "NARATOR: Sunce je polako zalazilo nad starim gradom.",
+    "timestamp": 1736520000
   },
   {
     "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "djdkfsjldjsfjljsdkfjsjfljdljfkldjskfjlkdsjflkjlkdfj",
-    "timestamp": 1767194558
+    "lineId": 2,
+    "nextLineId": 3,
+    "content": "ALICE: Jesi li siguran da je ključ ostao u biblioteci?",
+    "timestamp": 1736520010
   },
   {
     "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "AzuriranaLinija",
-    "timestamp": 1767195085
-  },
-  {
-    "scenarioId": 2,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "AzuriranaLinija",
-    "timestamp": 1767195133
+    "lineId": 3,
+    "nextLineId": 4,
+    "content": "BOB: To je posljednje mjesto gdje sam ga vidio prije nego što je pala noć.",
+    "timestamp": 1736520020
   },
   {
     "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "PonovoAzurirana",
-    "timestamp": 1767196357
+    "lineId": 4,
+    "nextLineId": 5,
+    "content": "ALICE: Moramo požuriti prije nego što čuvar zaključa glavna vrata.",
+    "timestamp": 1736520030
   },
   {
-    "scenarioId": 4,
+    "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Hasanaga i njegova majka stoje ispred kuće",
-    "timestamp": 1767197452
+    "lineId": 5,
+    "nextLineId": 6,
+    "content": "BOB: Čekaj, čuješ li taj zvuk iza polica?",
+    "timestamp": 1736520040
   },
   {
-    "scenarioId": 4,
+    "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
+    "lineId": 6,
     "nextLineId": null,
-    "content": "Hasanaga stoji sam na dvoru",
-    "timestamp": 1767197495
+    "content": "NARATOR: Iz sjene se polako pojavila nepoznata figura.",
+    "timestamp": 1736520050
   },
   {
-    "scenarioId": 5,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Patuljci cekaju da snjeguljica otvori vrata",
-    "timestamp": 1767197572
-  },
-  {
-    "scenarioId": 6,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Ovo je novi scenarij.",
-    "timestamp": 1767208356
-  },
-  {
-    "scenarioId": 3,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "NijeAzurirana",
-    "timestamp": 1767208732
-  },
-  {
-    "scenarioId": 7,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Prva linija",
-    "timestamp": 1767209074
-  },
-  {
-    "scenarioId": 2,
+    "scenarioId": 1,
     "type": "char_rename",
-    "oldName": "",
-    "newName": "",
-    "timestamp": 1767209362
+    "oldName": "BOB",
+    "newName": "ROBERT",
+    "timestamp": 1736520100
   },
   {
     "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "ok",
-    "timestamp": 1767210318
-  },
-  {
-    "scenarioId": 2,
-    "type": "char_rename",
-    "oldName": "AzuriranaLinija",
-    "newName": "NijeAzurirana",
-    "timestamp": 1767210496
-  },
-  {
-    "scenarioId": 5,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767212385
-  },
-  {
-    "scenarioId": 1,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767212820
-  },
-  {
-    "scenarioId": 1,
-    "type": "line_update",
-    "lineId": 1,
+    "lineId": 3,
     "nextLineId": 7,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767213190
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306320
   },
   {
     "scenarioId": 1,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 12,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767213507
-  },
-  {
-    "scenarioId": 1,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 17,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767213556
-  },
-  {
-    "scenarioId": 9,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767213903
-  },
-  {
-    "scenarioId": 10,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767213983
-  },
-  {
-    "scenarioId": 11,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767214231
-  },
-  {
-    "scenarioId": 14,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767214797
-  },
-  {
-    "scenarioId": 15,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767214881
-  },
-  {
-    "scenarioId": 16,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767215087
-  },
-  {
-    "scenarioId": 17,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767215524
-  },
-  {
-    "scenarioId": 1,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 22,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767215596
-  },
-  {
-    "scenarioId": 18,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767215619
-  },
-  {
-    "scenarioId": 19,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767215767
-  },
-  {
-    "scenarioId": 20,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767216064
-  },
-  {
-    "scenarioId": 21,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767216255
-  },
-  {
-    "scenarioId": 22,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767216402
-  },
-  {
-    "scenarioId": 23,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767216545
-  },
-  {
-    "scenarioId": 24,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767216756
-  },
-  {
-    "scenarioId": 22,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 7,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767216846
-  },
-  {
-    "scenarioId": 25,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767216877
-  },
-  {
-    "scenarioId": 26,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "\"Ovo je test rečenica koja ima tačno trideset devet riječi i treba biti podijeljena na dvije linije prva linija će",
-    "timestamp": 1767217198
-  },
-  {
-    "scenarioId": 26,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 3,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767217237
-  },
-  {
-    "scenarioId": 27,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767217360
-  },
-  {
-    "scenarioId": 28,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767217469
-  },
-  {
-    "scenarioId": 29,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767217576
-  },
-  {
-    "scenarioId": 30,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767217656
-  },
-  {
-    "scenarioId": 31,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767217796
-  },
-  {
-    "scenarioId": 32,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767217916
-  },
-  {
-    "scenarioId": 33,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "NestoPokusavam",
-    "timestamp": 1767218139
-  },
-  {
-    "scenarioId": 34,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica mobilnih aplikacija softverskih rješenja",
-    "timestamp": 1767218185
-  },
-  {
-    "scenarioId": 34,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": null,
-    "content": "i automatskih sistema. Programeri pišu kod koristeći različite programske jezike kao što su JavaScript Python Java i C++.",
-    "timestamp": 1767218185
-  },
-  {
-    "scenarioId": 37,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Hej",
-    "timestamp": 1767219937
-  },
-  {
-    "scenarioId": 37,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "nije hej",
-    "timestamp": 1767220025
-  },
-  {
-    "scenarioId": 38,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "LinijaZakljucana",
-    "timestamp": 1767220187
-  },
-  {
-    "scenarioId": 38,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "nije",
-    "timestamp": 1767220243
-  },
-  {
-    "scenarioId": 37,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "azurirat cu",
-    "timestamp": 1767220298
-  },
-  {
-    "scenarioId": 37,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "azurirala",
-    "timestamp": 1767220321
-  },
-  {
-    "scenarioId": 39,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Linija azurirana",
-    "timestamp": 1767220416
-  },
-  {
-    "scenarioId": 40,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Azuriram liniju",
-    "timestamp": 1767220591
-  },
-  {
-    "scenarioId": 40,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Ponovo azuriram",
-    "timestamp": 1767220639
-  },
-  {
-    "scenarioId": 41,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "azuriram",
-    "timestamp": 1767220789
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "AZURIRAM",
-    "timestamp": 1767220925
-  },
-  {
-    "scenarioId": 44,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Neki novi tekst ponovo unosimo",
-    "timestamp": 1767221376
-  },
-  {
-    "scenarioId": 39,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "hej",
-    "timestamp": 1767227269
-  },
-  {
-    "scenarioId": 46,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Nova recenica",
-    "timestamp": 1767229445
-  },
-  {
-    "scenarioId": 46,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767229466
-  },
-  {
-    "scenarioId": 46,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": 3,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767229466
-  },
-  {
-    "scenarioId": 46,
-    "type": "line_update",
-    "lineId": 3,
-    "nextLineId": 4,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767229466
-  },
-  {
-    "scenarioId": 46,
-    "type": "line_update",
-    "lineId": 4,
-    "nextLineId": 5,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767229466
-  },
-  {
-    "scenarioId": 46,
-    "type": "line_update",
-    "lineId": 5,
-    "nextLineId": 6,
-    "content": "Python",
-    "timestamp": 1767229466
-  },
-  {
-    "scenarioId": 46,
-    "type": "line_update",
-    "lineId": 6,
-    "nextLineId": null,
-    "content": "Java i C++.",
-    "timestamp": 1767229466
-  },
-  {
-    "scenarioId": 47,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767229609
-  },
-  {
-    "scenarioId": 47,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": 3,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767229609
-  },
-  {
-    "scenarioId": 47,
-    "type": "line_update",
-    "lineId": 3,
-    "nextLineId": 4,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767229609
-  },
-  {
-    "scenarioId": 47,
-    "type": "line_update",
-    "lineId": 4,
-    "nextLineId": 5,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767229609
-  },
-  {
-    "scenarioId": 47,
-    "type": "line_update",
-    "lineId": 5,
-    "nextLineId": 6,
-    "content": "Python",
-    "timestamp": 1767229609
-  },
-  {
-    "scenarioId": 47,
-    "type": "line_update",
-    "lineId": 6,
-    "nextLineId": null,
-    "content": "Java i C++.",
-    "timestamp": 1767229609
-  },
-  {
-    "scenarioId": 48,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767229748
-  },
-  {
-    "scenarioId": 48,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": 3,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767229748
-  },
-  {
-    "scenarioId": 48,
-    "type": "line_update",
-    "lineId": 3,
-    "nextLineId": 4,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767229748
-  },
-  {
-    "scenarioId": 48,
-    "type": "line_update",
-    "lineId": 4,
-    "nextLineId": 5,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767229748
-  },
-  {
-    "scenarioId": 48,
-    "type": "line_update",
-    "lineId": 5,
-    "nextLineId": 6,
-    "content": "Python",
-    "timestamp": 1767229748
-  },
-  {
-    "scenarioId": 48,
-    "type": "line_update",
-    "lineId": 6,
-    "nextLineId": null,
-    "content": "Java i C++.",
-    "timestamp": 1767229748
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767230301
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": 3,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767230301
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 3,
-    "nextLineId": 4,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767230301
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 4,
-    "nextLineId": 5,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767230301
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 5,
-    "nextLineId": 6,
-    "content": "Python",
-    "timestamp": 1767230301
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 6,
-    "nextLineId": null,
-    "content": "Java i C++.",
-    "timestamp": 1767230301
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 7,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767230398
-  },
-  {
-    "scenarioId": 50,
     "type": "line_update",
     "lineId": 7,
     "nextLineId": 8,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767230398
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306320
   },
   {
-    "scenarioId": 50,
+    "scenarioId": 1,
     "type": "line_update",
     "lineId": 8,
-    "nextLineId": 9,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767230398
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 9,
-    "nextLineId": 10,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767230398
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 10,
-    "nextLineId": 11,
-    "content": "Python",
-    "timestamp": 1767230398
-  },
-  {
-    "scenarioId": 50,
-    "type": "line_update",
-    "lineId": 11,
-    "nextLineId": 2,
-    "content": "Java i C++.",
-    "timestamp": 1767230398
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767230608
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": 3,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767230608
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 3,
     "nextLineId": 4,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767230608
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768306320
   },
   {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 4,
-    "nextLineId": 5,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767230608
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 5,
-    "nextLineId": 6,
-    "content": "Python",
-    "timestamp": 1767230608
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 6,
-    "nextLineId": null,
-    "content": "Java i C++.",
-    "timestamp": 1767230608
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 7,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767230749
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 7,
-    "nextLineId": 8,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767230749
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 8,
-    "nextLineId": 9,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767230749
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 9,
-    "nextLineId": 10,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767230749
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 10,
-    "nextLineId": 11,
-    "content": "Python",
-    "timestamp": 1767230749
-  },
-  {
-    "scenarioId": 42,
-    "type": "line_update",
-    "lineId": 11,
-    "nextLineId": 2,
-    "content": "Java i C++.",
-    "timestamp": 1767230749
-  },
-  {
-    "scenarioId": 51,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica",
-    "timestamp": 1767230798
-  },
-  {
-    "scenarioId": 51,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": 3,
-    "content": "mobilnih aplikacija",
-    "timestamp": 1767230798
-  },
-  {
-    "scenarioId": 51,
-    "type": "line_update",
-    "lineId": 3,
-    "nextLineId": 4,
-    "content": "softverskih rješenja i automatskih sistema. Programeri pišu kod koristeći različite programske jezike",
-    "timestamp": 1767230798
-  },
-  {
-    "scenarioId": 51,
-    "type": "line_update",
-    "lineId": 4,
-    "nextLineId": 5,
-    "content": "kao što su JavaScript",
-    "timestamp": 1767230798
-  },
-  {
-    "scenarioId": 51,
-    "type": "line_update",
-    "lineId": 5,
-    "nextLineId": 6,
-    "content": "Python",
-    "timestamp": 1767230798
-  },
-  {
-    "scenarioId": 51,
-    "type": "line_update",
-    "lineId": 6,
-    "nextLineId": null,
-    "content": "Java i C++.",
-    "timestamp": 1767230798
-  },
-  {
-    "scenarioId": 52,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": 2,
-    "content": "Programiranje je proces stvaranja računalnih programa koji rješavaju specifične probleme. Koristi se za razvoj web stranica, mobilnih aplikacija, softverskih rješenja",
-    "timestamp": 1767231231
-  },
-  {
-    "scenarioId": 52,
-    "type": "line_update",
-    "lineId": 2,
-    "nextLineId": null,
-    "content": "i automatskih sistema. Programeri pišu kod koristeći različite programske jezike, kao što su JavaScript, Python, Java i C",
-    "timestamp": 1767231231
-  },
-  {
-    "scenarioId": 53,
-    "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "ALICE ide u park. ALICE voli šetnje. BOB čeka ALICE kod fontane.",
-    "timestamp": 1767231402
-  },
-  {
-    "scenarioId": 53,
+    "scenarioId": 1,
     "type": "char_rename",
     "oldName": "ALICE",
     "newName": "ALICIA",
-    "timestamp": 1767231479
+    "timestamp": 1768306320
   },
   {
-    "scenarioId": 44,
+    "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "Brisemo i pisemo novi",
-    "timestamp": 1767233103
+    "lineId": 3,
+    "nextLineId": 9,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306516
   },
   {
-    "scenarioId": 44,
+    "scenarioId": 1,
     "type": "line_update",
-    "lineId": 1,
-    "nextLineId": null,
-    "content": "MAIDA danas radimo spiralu",
-    "timestamp": 1767233122
+    "lineId": 9,
+    "nextLineId": 10,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306516
   },
   {
-    "scenarioId": 44,
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 10,
+    "nextLineId": 7,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768306516
+  },
+  {
+    "scenarioId": 1,
     "type": "char_rename",
-    "oldName": "MAIDA",
-    "newName": "NAIDA",
-    "timestamp": 1767233134
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768306516
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 11,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306572
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 11,
+    "nextLineId": 12,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306572
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 12,
+    "nextLineId": 9,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768306572
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768306572
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 13,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306593
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 13,
+    "nextLineId": 14,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768306593
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 14,
+    "nextLineId": 11,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768306593
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768306593
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 15,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768422958
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 15,
+    "nextLineId": 16,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768422958
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 16,
+    "nextLineId": 13,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768422958
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768422958
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 17,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768423465
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 17,
+    "nextLineId": 18,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768423465
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 18,
+    "nextLineId": 15,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768423465
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768423465
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 19,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768423642
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 19,
+    "nextLineId": 20,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768423642
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 20,
+    "nextLineId": 17,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768423642
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768423642
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 21,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424116
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 21,
+    "nextLineId": 22,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424116
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 22,
+    "nextLineId": 19,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768424116
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768424116
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 23,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424212
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 23,
+    "nextLineId": 24,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424212
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 24,
+    "nextLineId": 21,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768424212
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768424212
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 25,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424237
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 25,
+    "nextLineId": 26,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424237
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 26,
+    "nextLineId": 23,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768424237
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768424237
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 27,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424304
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 27,
+    "nextLineId": 28,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424304
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 28,
+    "nextLineId": 25,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768424304
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768424304
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 29,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424790
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 29,
+    "nextLineId": 30,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424790
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 30,
+    "nextLineId": 27,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768424790
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768424790
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 31,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424954
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 31,
+    "nextLineId": 32,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768424954
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 32,
+    "nextLineId": 29,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768424954
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768424954
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 33,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768425020
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 33,
+    "nextLineId": 34,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768425020
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 34,
+    "nextLineId": 31,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768425020
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768425020
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 3,
+    "nextLineId": 35,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768425435
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 35,
+    "nextLineId": 36,
+    "content": "riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ riječ",
+    "timestamp": 1768425435
+  },
+  {
+    "scenarioId": 1,
+    "type": "line_update",
+    "lineId": 36,
+    "nextLineId": 33,
+    "content": "riječ riječ riječ riječ riječ",
+    "timestamp": 1768425435
+  },
+  {
+    "scenarioId": 1,
+    "type": "char_rename",
+    "oldName": "ALICE",
+    "newName": "ALICIA",
+    "timestamp": 1768425435
   }
 ]

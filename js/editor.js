@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         let firstLine = content.find(l => !hasIncoming.has(l.lineId));
-        if (!firstLine) firstLine = content[0]; // fallback
+        if (!firstLine) firstLine = content[0]; 
         
       
         const sorted = [];
@@ -160,8 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return text;
         }
 
-        // Ako je string, koristi ga direktno, inače izvuci tekst iz elementa
-        const rawText = typeof paragrafElement === 'string' 
+       const rawText = typeof paragrafElement === 'string' 
             ? paragrafElement 
             : getAllText(paragrafElement);
 
@@ -172,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // KLJUČNO: Očisti SVE newline, tab i višestruke razmake
         const cleanText = rawText
             .replace(/\n+/g, ' ')      
             .replace(/\r+/g, ' ')     
@@ -193,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // DUGMAD
     const btnUcitaj = document.getElementById('btn-ucitaj');
     if (btnUcitaj) {
         btnUcitaj.onclick = function() {
