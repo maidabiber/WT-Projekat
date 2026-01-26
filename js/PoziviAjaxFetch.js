@@ -70,5 +70,7 @@ const PoziviAjaxFetch = (function() {
                 null);
             callback(result.status, result.data);
         }
+
+        
     };
 })();

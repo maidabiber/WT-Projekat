@@ -277,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         };
     }
+    
 
     const btnDeltas = document.getElementById('btn-delte');
     if (btnDeltas) {
