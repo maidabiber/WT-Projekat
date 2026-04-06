@@ -12,3 +12,4 @@ Ovo je projekat rađen na petom semestru u sklopu predmeta Web tehnologije, na E
 * **Baza:** MySQL 
 * **Klijent:** JavaScript (ES6), HTML5, CSS3
 
+💡 **Napomena:** Ovaj projekat će mi služiti kao osnova za dalji **samostalni razvoj** aplikacije ScenarijPro van okvira fakultetskog projekta.
